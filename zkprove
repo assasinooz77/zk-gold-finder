@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# exit when any command fails
+set -e
+
+# requires: circuit.json, input.json, proving.key
+
+# snarkjs calculatewitness
+# snarkjs proof
+# rm -f witness.json
+# snarkjs verify	# test the proof by verifying it
+
+# output: proof.json, public.json
+
+node ./circuit_js/generate_witness.js ./circuit_js/circuit.wasm input.json witness.wtns
+snarkjs plonk setup circuit.r1cs ./pot16/pot16_final.ptau circuit_final.zkey
+snarkjs zkey export verificationkey circuit_final.zkey verification_key.json
+snarkjs plonk prove circuit_final.zkey witness.wtns proof.json public.json
+snarkjs plonk verify verification_key.json public.json proof.json
+snarkjs zkey export solidityverifier circuit_final.zkey verifier.sol
+snarkjs zkey export soliditycalldata public.json proof.json
