@@ -31,4 +31,4 @@ template GoldFinder() {
     out <== hasGold;
 }
 
-component main = GoldFinder();
+component main {public [goldHash, targetX, targetY]} = GoldFinder();
