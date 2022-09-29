@@ -1,10 +1,10 @@
 1,1,11,main.out
-2,2,11,main.goldX
-3,3,11,main.goldY
-4,4,11,main.goldHash[0]
-5,5,11,main.goldHash[1]
-6,6,11,main.targetX
-7,7,11,main.targetY
+2,2,11,main.goldHash[0]
+3,3,11,main.goldHash[1]
+4,4,11,main.targetX
+5,5,11,main.targetY
+6,6,11,main.goldX
+7,7,11,main.goldY
 8,-1,11,main.isInRange
 9,-1,11,main.hasGold
 10,-1,9,main.hash.out[0]

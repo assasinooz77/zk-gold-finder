@@ -26,4 +26,4 @@ Prove and generate the verifier contract
 
 Deploy the `verifier.sol` contract on Goerli network
 You can see the existing contract here
-https://goerli.etherscan.io/address/0x02DAe08538F1b1092B06F776a4732248073dC45d
+https://goerli.etherscan.io/address/0x6a44563331c761d39bafde4c788882a45e360938
